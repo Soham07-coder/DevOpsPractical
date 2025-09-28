@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Starting the Build stage...'
                 // REPLACE THIS with your actual build command (e.g., mvn clean install)
-                sh 'echo "Running compilation/packaging command..."' 
+                bat'echo "Running compilation/packaging command..."' 
                 echo 'Build complete.'
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Starting the Test stage...'
                 // REPLACE THIS with your actual test command (e.g., mvn test)
-                sh 'echo "Running unit and integration tests..."'
+                bat'echo "Running unit and integration tests..."'
                 // NOTE: A failing command here will stop the pipeline
                 echo 'Tests passed.'
             }
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Starting the Deploy stage...'
                 // REPLACE THIS with your actual deployment command (e.g., scp, docker push, server restart)
-                sh 'echo "Deploying built artifact to target environment..."'
+                bat 'echo "Deploying built artifact to target environment..."'
                 echo 'Deployment finished successfully.'
             }
         }
